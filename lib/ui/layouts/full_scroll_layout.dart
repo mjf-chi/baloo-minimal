@@ -4,11 +4,11 @@ import 'package:baloo/ui/layouts/base_container.dart';
 import 'package:baloo/ui/components/Headers/floating.dart';
 
 class FullScrollLayout extends StatefulWidget {
-  final String header;
+  final Widget header;
   final Widget child;
   final Widget bottomNavigationSection;
 
-  const FullScrollLayout ({
+  const FullScrollLayout({
     Key key,
     this.header,
     this.child,
@@ -42,7 +42,7 @@ class _FullScrollLayoutState extends State<FullScrollLayout> {
         },
         child: CustomScrollView(
           slivers: [
-            FloatingHeader(title: widget.header),
+            widge.header(isScrolling: _isScrolling),
             widget.child,
             widget.bottomNavigationSection(isScrolling: _isScrolling),
           ],
