@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:baloo/provider_setup.dart';
-import 'package:baloo/core/constants/routes.dart';
-import 'package:baloo/ui/router.dart';
+import 'package:baloo/ui/constants/routes.dart';
+import 'package:baloo/ui/minimal_router.dart';
 
 
 void main() {
@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Baloo',
-      initialRoute: RoutePaths.Action,
+      initialRoute: RoutePaths.Welcome,
       onGenerateRoute: Router.generateRoute,
     );
   }

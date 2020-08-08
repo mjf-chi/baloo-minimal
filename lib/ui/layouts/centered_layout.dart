@@ -11,7 +11,7 @@ class CenteredLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseContainer(
       child: Center(
-        child: child,
+        child: _child,
       ),
     );
   }

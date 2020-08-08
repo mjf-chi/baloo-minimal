@@ -36,7 +36,7 @@ class BaseTextStyle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.darkGrey,
         fontSize: 16,
         fontFamily: Fonts.primary.family,
@@ -52,8 +52,8 @@ class Logo extends BaseTextStyle {
   @override
   Widget build(BuildContext context) {
     return Text(
-      text.toUpperCase(),
-      TextStyle(
+      text,
+      style: TextStyle(
         color: BrandColors.lightGrey,
         fontSize: 24,
         fontFamily: Fonts.primary.family,
@@ -69,7 +69,7 @@ class SectionHeader extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text.toUpperCase(),
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.darkGrey,
         fontSize: 16,
         fontFamily: Fonts.primary.family,
@@ -85,7 +85,7 @@ class MediumLabel extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.darkGrey,
         fontSize: 14,
         fontFamily: Fonts.primary.family,
@@ -101,7 +101,7 @@ class Assistant extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.lightGrey,
         fontSize: 12,
         fontFamily: Fonts.primary.family,
@@ -117,7 +117,7 @@ class MediumValue extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.black,
         fontSize: 22,
         fontFamily: Fonts.primary.family,
@@ -134,7 +134,7 @@ class SmallLabel extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.darkGrey,
         fontSize: 12,
         fontFamily: Fonts.primary.family,
@@ -151,7 +151,7 @@ class ActiveOption extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text.toUpperCase(),
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.darkGrey,
         fontSize: 22,
         fontFamily: Fonts.primary.family,
@@ -168,7 +168,7 @@ class InactiveOption extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text.toUpperCase(),
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.lightGrey,
         fontSize: 16,
         fontFamily: Fonts.primary.family,
@@ -185,7 +185,7 @@ class BodyCopy extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.darkGrey,
         fontSize: 14,
         fontFamily: Fonts.primary.family,
@@ -202,7 +202,7 @@ class LinkText extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text.toUpperCase(),
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.black,
         fontSize: 16,
         fontFamily: Fonts.link.family,
@@ -219,7 +219,7 @@ class ButtonText extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.white,
         fontSize: 16,
         fontFamily: Fonts.link.family,
@@ -236,7 +236,7 @@ class InputLabel extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.black,
         fontSize: 14,
         fontFamily: Fonts.link.family,
@@ -244,16 +244,16 @@ class InputLabel extends BaseTextStyle {
       ),
     );
   }
-};
+}
 
 class InputPlaceholder extends BaseTextStyle {
-  InputLabel({ String text }) : super(text: text);
+  InputPlaceholder({ String text }) : super(text: text);
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.lightGrey,
         fontSize: 24,
         fontFamily: Fonts.primary.family,
@@ -261,7 +261,7 @@ class InputPlaceholder extends BaseTextStyle {
       ),
     );
   }
-};
+}
 
 class InputValue extends BaseTextStyle {
   InputValue({ String text }) : super(text: text);
@@ -270,7 +270,7 @@ class InputValue extends BaseTextStyle {
   Widget build(BuildContext context) {
     return Text(
       text,
-      TextStyle(
+      style: TextStyle(
         color: BrandColors.black,
         fontSize: 24,
         fontFamily: Fonts.primary.family,
@@ -278,4 +278,4 @@ class InputValue extends BaseTextStyle {
       ),
     );
   }
-};
+}

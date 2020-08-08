@@ -19,7 +19,7 @@ class BaseContainer extends StatelessWidget {
             colors: [BrandColors.lightOffWhite, BrandColors.darkOffWhite],
           ),
         ),
-        child: SafeArea(child: child),
+        child: SafeArea(child: _child),
       ),
     );
   }

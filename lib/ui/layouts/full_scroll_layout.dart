@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:baloo/ui/layouts/base_container.dart';
-import 'package:baloo/ui/components/Headers/floating.dart';
+
 
 class FullScrollLayout extends StatefulWidget {
-  final Widget header;
+  Widget header = Container(width: 0, height: 0);
   final Widget child;
   final Widget bottomNavigationSection;
 

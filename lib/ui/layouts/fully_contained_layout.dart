@@ -7,13 +7,13 @@ import 'package:baloo/ui/theme/text_styles.dart';
 
 
 class FullyContainedLayout extends StatelessWidget {
-  final String _header;
+  final Widget _header;
   final Widget _body;
   final Widget _bottomSection;
 
 
   FullyContainedLayout({
-    String header,
+    Widget header,
     Widget child,
     Widget bottomSection,
   })
@@ -28,7 +28,7 @@ class FullyContainedLayout extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SectionHeader(text: _header),
+          _header,
           _body,
           _bottomSection,
         ],
