@@ -8,6 +8,8 @@ import 'package:baloo/ui/theme/colors.dart';
 
 import 'package:baloo/ui/layouts/base_container.dart';
 
+import 'package:baloo/ui/components/Animated/progress_bar.dart';
+
 
 void main() {
   final dashbook = Dashbook();
@@ -55,6 +57,18 @@ void main() {
         ],
       );
     });
+
+  dashbook
+    .storiesOf('Animated')
+    .add('Progress Bar 1%', (ctx) {
+       return ProgressBar(value: 1, target: 100);
+     })
+     .add('Progress Bar 50%', (ctx) {
+       return ProgressBar(value: 50, target: 100);
+     })
+     .add('Progress Bar 100%', (ctx) {
+       return ProgressBar(value: 100, target: 100);
+     });
 
   runApp(dashbook);
 }
