@@ -8,6 +8,7 @@ import 'package:baloo/ui/theme/colors.dart';
 
 import 'package:baloo/ui/layouts/base_container.dart';
 
+import 'package:baloo/ui/components/DataRepresentations/value_target.dart';
 import 'package:baloo/ui/components/Animated/progress_bar.dart';
 
 
@@ -60,6 +61,9 @@ void main() {
 
   dashbook
     .storiesOf('Animated')
+    .add('Value Target Pair', (ctx) {
+       return ValueTarget(value: 15392.3, target: 20000.0);
+     })
     .add('Progress Bar 1%', (ctx) {
        return ProgressBar(value: 1, target: 100);
      })
