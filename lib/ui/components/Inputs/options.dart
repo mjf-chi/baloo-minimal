@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:baloo/ui/theme/text_styles.dart';
 
-
 class OptionsInput extends StatelessWidget {
   final List<String> _options;
   final Function _onSelect;
@@ -19,26 +18,29 @@ class OptionsInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: _options.length,
-            itemBuilder: (BuildContext context, int index) =>
-              Center(
-                child: Item(
-                  option: _options[index],
-                  isSelected: index == _selectedIdx,
-                  onTap: () => _onSelect(index),
+    return Container(
+      height: 180,
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: _options.length,
+              itemBuilder: (BuildContext context, int index) =>
+                Center(
+                  child: Item(
+                    option: _options[index],
+                    isSelected: index == _selectedIdx,
+                    onTap: () => _onSelect(index),
+                  ),
                 ),
-              ),
+            ),
           ),
-        ),
-      ]
+        ]
+      ),
     );
  }
-};
+}
 
 
 class Item extends StatelessWidget {
@@ -49,7 +51,7 @@ class Item extends StatelessWidget {
   Item({
     String option,
     bool isSelected,
-    Function onTap;
+    Function onTap,
   })
     : _option = option,
       _isSelected = isSelected,
@@ -58,9 +60,9 @@ class Item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap(),
-      child: _isSelected ? _activeOption() : _inactiveOption,
-    ),
+      onTap: _onTap,
+      child: _isSelected ? _activeOption() : _inactiveOption(),
+    );
   }
 
   Widget _activeOption() {

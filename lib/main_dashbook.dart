@@ -12,6 +12,10 @@ import 'package:baloo/ui/components/DataRepresentations/value_target.dart';
 import 'package:baloo/ui/components/DataRepresentations/material_impact_progress.dart';
 import 'package:baloo/ui/components/Animated/progress_bar.dart';
 
+// Global Target Section
+import 'package:baloo/storybook/mock_data.dart';
+import 'package:baloo/ui/sections/globaltarget/labeled_target.dart';
+import 'package:baloo/ui/sections/globaltarget/complete.dart';
 
 void main() {
   final dashbook = Dashbook();
@@ -81,6 +85,21 @@ void main() {
          target: 20000.0,
        );
      });
+
+  dashbook
+    .storiesOf('Global Target Section')
+    .add('Complete', (ctx) {
+      List<Map<String, Map<String, double>>> data = globalTargetMockData();
+      return GlobalTargetComplete(data: data);
+    })
+    .add('Labeled Target', (ctx) {
+      return LabeledTarget(
+        primaryLabel: 'Water',
+        secondaryLabel: '( liters )',
+        value: 15392.3,
+        target: 20000.0,
+      );
+    });
 
   runApp(dashbook);
 }
